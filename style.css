@@ -1,0 +1,140 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Lily+Script+One&display=swap');
+
+* {
+  font-family: 'Lily Script One', display;
+}
+
+
+
+body {
+    width: 100%;
+    min-height: 100vh;
+    margin: 0;
+    padding: 0;
+}
+
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.win {
+    background-color: rgb(23, 212, 6);
+}
+
+h2 {
+    font-size: 5vw;
+}
+.again {
+    padding: 8px 20px;
+    font-size: 24px;
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    border: 4px gold ridge;  
+    cursor: pointer;
+    transition: .3s;
+}
+
+.again:hover {
+    border: 4px rgb(255, 123, 0) ridge;  
+}
+
+p {
+    margin: 0;
+    position: absolute;
+    top: 4px;
+    right: 10px;
+    font-size: 17px;
+}
+.buttons {
+    display: flex;
+    justify-content: space-around;
+    align-items:center;
+}
+
+.result {
+  
+    width: 90px;
+    height: 90px;
+    position: relative;
+    transform: translateY(0);
+    transition: transform 1s;
+    border:none;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, .5);
+    border-radius:50%;
+    font-size: 40px;
+}
+
+.result::after {
+    content: "";
+    display: block;
+    position: absolute;
+    bottom: -30px;
+    left: 50%;
+    height: 8px;
+    width: 100%;
+    box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.4);
+    border-radius: 50%;
+    background-color: rgba(0, 0, 0, 0.2);
+    transform: translate(-50%, 0);
+    transition: transform 1s;
+}
+.result.win {
+    transform: translateY(-30px);
+    transition: transform 1s;
+}
+.result.win::after {
+    transform: translate(-50%, 40px) scale(0.75);
+    transition: transform 1s;
+}
+
+.content{
+    padding-top: 50px;
+    display: flex;
+    justify-content: space-around;
+    align-items:center;
+    flex-direction: row;
+}
+
+.content div:nth-child(1) {
+    padding-right: 200px;
+}
+
+.content div:nth-child(2) {
+    padding-left: 200px;
+}
+
+button,input {
+    display: block;
+}
+
+.mynumber {
+    width: 120px;
+    height: 50px;
+    padding: 10px;
+    font-size: 40px;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.check {
+    margin: auto;
+    padding: 12px 20px;
+    font-size: 22px;
+    background-color: rgb(65, 252, 8);
+}
+
+.text {
+    color: red;
+    font-size: 30px;
+    padding-bottom: 20px;
+}
+
+span {
+    display: block;
+    font-size: 22px;
+}
